@@ -3,10 +3,19 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description" content="Muhammad Hassaan Shahid - Electrical & Electronics Engineer specializing in Power Systems, Automation, Instrumentation and Smart Metering.">
+
 <title>Muhammad Hassaan Shahid | Electrical & Electronics Engineer</title>
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
 
 body{
 font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
@@ -14,6 +23,8 @@ background:#070b16;
 color:#f8fafc;
 line-height:1.6;
 }
+
+/* ================= NAVIGATION ================= */
 
 nav{
 position:fixed;
@@ -24,7 +35,7 @@ padding:0 7%;
 display:flex;
 align-items:center;
 justify-content:space-between;
-background:rgba(7,11,22,.85);
+background:rgba(7,11,22,.88);
 backdrop-filter:blur(16px);
 border-bottom:1px solid #1e293b;
 z-index:1000;
@@ -36,7 +47,9 @@ font-weight:800;
 letter-spacing:-.5px;
 }
 
-.logo span{color:#38bdf8}
+.logo span{
+color:#38bdf8;
+}
 
 .navlinks{
 display:flex;
@@ -48,23 +61,34 @@ color:#94a3b8;
 text-decoration:none;
 font-size:14px;
 font-weight:600;
+transition:.25s;
 }
 
-.navlinks a:hover{color:#38bdf8}
+.navlinks a:hover{
+color:#38bdf8;
+}
+
+/* ================= HERO ================= */
 
 .hero{
 min-height:100vh;
-padding:150px 7% 80px;
+padding:140px 7% 80px;
 display:flex;
 align-items:center;
+justify-content:space-between;
+gap:70px;
 position:relative;
 overflow:hidden;
+
 background:
 radial-gradient(circle at 80% 20%,#0ea5e920,transparent 30%),
 radial-gradient(circle at 20% 80%,#2563eb12,transparent 30%);
 }
 
-.hero-content{max-width:900px}
+.hero-content{
+max-width:780px;
+flex:1;
+}
 
 .eyebrow{
 display:inline-block;
@@ -100,6 +124,44 @@ color:#94a3b8;
 max-width:720px;
 }
 
+/* ================= PROFILE PHOTO ================= */
+
+.profile-container{
+width:340px;
+height:340px;
+flex-shrink:0;
+display:flex;
+align-items:center;
+justify-content:center;
+position:relative;
+}
+
+.profile-container::before{
+content:"";
+position:absolute;
+width:340px;
+height:340px;
+border-radius:50%;
+background:radial-gradient(circle,#38bdf820,transparent 65%);
+filter:blur(10px);
+}
+
+.profile-photo{
+width:290px;
+height:290px;
+border-radius:50%;
+object-fit:cover;
+object-position:center;
+border:3px solid #38bdf8;
+box-shadow:
+0 0 30px #38bdf840,
+0 0 70px #38bdf820;
+position:relative;
+z-index:2;
+}
+
+/* ================= BUTTONS ================= */
+
 .buttons{
 display:flex;
 gap:14px;
@@ -121,7 +183,10 @@ background:#38bdf8;
 color:#06101b;
 }
 
-.primary:hover{transform:translateY(-3px)}
+.primary:hover{
+transform:translateY(-3px);
+box-shadow:0 10px 30px #38bdf830;
+}
 
 .secondary{
 border:1px solid #334155;
@@ -133,7 +198,11 @@ border-color:#38bdf8;
 transform:translateY(-3px);
 }
 
-section{padding:100px 7%}
+/* ================= SECTIONS ================= */
+
+section{
+padding:100px 7%;
+}
 
 .section-label{
 color:#38bdf8;
@@ -156,6 +225,8 @@ margin-bottom:45px;
 font-size:17px;
 }
 
+/* ================= ABOUT ================= */
+
 .about{
 background:#0c1220;
 }
@@ -177,6 +248,7 @@ transition:.3s;
 .card:hover{
 transform:translateY(-6px);
 border-color:#38bdf8;
+box-shadow:0 15px 40px #00000030;
 }
 
 .card-icon{
@@ -193,6 +265,8 @@ margin-bottom:10px;
 color:#94a3b8;
 font-size:15px;
 }
+
+/* ================= EXPERIENCE ================= */
 
 .timeline{
 border-left:2px solid #1e3a5f;
@@ -228,7 +302,11 @@ font-size:22px;
 margin-bottom:5px;
 }
 
-.timeline p{color:#94a3b8}
+.timeline p{
+color:#94a3b8;
+}
+
+/* ================= PROJECTS ================= */
 
 .project{
 background:#0c1220;
@@ -240,6 +318,13 @@ border:1px solid #1e293b;
 border-radius:18px;
 padding:30px;
 min-height:220px;
+transition:.3s;
+}
+
+.project-card:hover{
+transform:translateY(-6px);
+border-color:#38bdf8;
+box-shadow:0 15px 40px #00000030;
 }
 
 .project-card h3{
@@ -266,6 +351,8 @@ font-size:12px;
 color:#cbd5e1;
 }
 
+/* ================= SKILLS ================= */
+
 .skills{
 display:flex;
 flex-wrap:wrap;
@@ -279,10 +366,20 @@ border:1px solid #1e293b;
 border-radius:30px;
 font-size:14px;
 color:#cbd5e1;
+transition:.25s;
 }
+
+.skill:hover{
+border-color:#38bdf8;
+color:#38bdf8;
+transform:translateY(-2px);
+}
+
+/* ================= CONTACT ================= */
 
 .contact{
 text-align:center;
+
 background:
 radial-gradient(circle at center,#0ea5e915,transparent 45%),
 #070b16;
@@ -308,12 +405,15 @@ border-radius:9px;
 color:#cbd5e1;
 text-decoration:none;
 font-weight:600;
+transition:.25s;
 }
 
 .social:hover{
 border-color:#38bdf8;
 color:#38bdf8;
 }
+
+/* ================= FOOTER ================= */
 
 footer{
 padding:25px 7%;
@@ -323,6 +423,50 @@ color:#64748b;
 font-size:13px;
 }
 
+/* ================= TABLET ================= */
+
+@media(max-width:900px){
+
+.hero{
+flex-direction:column-reverse;
+align-items:center;
+text-align:center;
+padding:130px 6% 80px;
+gap:40px;
+}
+
+.hero-content{
+max-width:800px;
+}
+
+.hero p{
+margin-left:auto;
+margin-right:auto;
+}
+
+.buttons{
+justify-content:center;
+}
+
+.profile-container{
+width:280px;
+height:280px;
+}
+
+.profile-container::before{
+width:280px;
+height:280px;
+}
+
+.profile-photo{
+width:240px;
+height:240px;
+}
+
+}
+
+/* ================= MOBILE ================= */
+
 @media(max-width:700px){
 
 nav{
@@ -330,10 +474,28 @@ height:64px;
 padding:0 5%;
 }
 
-.navlinks{display:none}
+.navlinks{
+display:none;
+}
 
 .hero{
-padding:130px 6% 70px;
+padding:110px 6% 70px;
+gap:30px;
+}
+
+.profile-container{
+width:230px;
+height:230px;
+}
+
+.profile-container::before{
+width:230px;
+height:230px;
+}
+
+.profile-photo{
+width:200px;
+height:200px;
 }
 
 h1{
@@ -349,6 +511,17 @@ font-size:23px;
 font-size:16px;
 }
 
+.buttons{
+flex-direction:column;
+align-items:stretch;
+width:100%;
+}
+
+.btn{
+text-align:center;
+width:100%;
+}
+
 section{
 padding:75px 6%;
 }
@@ -358,36 +531,51 @@ font-size:36px;
 }
 
 }
+
 </style>
 </head>
 
 <body>
 
+<!-- ================= NAVIGATION ================= -->
+
 <nav>
-<div class="logo">Hassaan<span>.</span></div>
+
+<div class="logo">
+Hassaan<span>.</span>
+</div>
 
 <div class="navlinks">
+
 <a href="#about">About</a>
 <a href="#experience">Experience</a>
 <a href="#projects">Projects</a>
 <a href="#skills">Skills</a>
 <a href="#contact">Contact</a>
+
 </div>
+
 </nav>
 
+
+<!-- ================= HERO ================= -->
 
 <section class="hero">
 
 <div class="hero-content">
 
-<div class="eyebrow">ELECTRICAL & ELECTRONICS ENGINEER</div>
+<div class="eyebrow">
+ELECTRICAL & ELECTRONICS ENGINEER
+</div>
 
 <h1>
 Muhammad<br>
 <span class="gradient">Hassaan Shahid</span>
 </h1>
 
-<h2>Power Systems • Automation • Instrumentation</h2>
+<h2>
+Power Systems • Automation • Instrumentation
+</h2>
 
 <p>
 Electrical and Electronics Engineer focused on power systems,
@@ -405,7 +593,13 @@ View My Work
 Let's Connect
 </a>
 
-<a href="CV.pdf" class="btn secondary" target="_blank" rel="noopener">
+<a
+href="CV.pdf"
+class="btn secondary"
+target="_blank"
+rel="noopener"
+download
+>
 Download CV
 </a>
 
@@ -413,14 +607,33 @@ Download CV
 
 </div>
 
+
+<!-- PROFILE IMAGE -->
+
+<div class="profile-container">
+
+<img
+src="profile.jpg"
+alt="Muhammad Hassaan Shahid"
+class="profile-photo"
+>
+
+</div>
+
 </section>
 
 
+<!-- ================= ABOUT ================= -->
+
 <section id="about" class="about">
 
-<div class="section-label">ABOUT ME</div>
+<div class="section-label">
+ABOUT ME
+</div>
 
-<h2 class="title">Engineering with purpose.</h2>
+<h2 class="title">
+Engineering with purpose.
+</h2>
 
 <p class="subtitle">
 I combine electrical engineering knowledge with practical
@@ -430,43 +643,77 @@ automation and emerging technologies.
 
 <div class="cards">
 
+
 <div class="card">
-<div class="card-icon">⚡</div>
-<h3>Power Systems</h3>
+
+<div class="card-icon">
+⚡
+</div>
+
+<h3>
+Power Systems
+</h3>
+
 <p>
 Interested in power generation, transmission, distribution,
 protection and modern power-system technologies.
 </p>
+
 </div>
 
+
 <div class="card">
-<div class="card-icon">⚙️</div>
-<h3>Automation</h3>
+
+<div class="card-icon">
+⚙️
+</div>
+
+<h3>
+Automation
+</h3>
+
 <p>
 Experience with industrial automation, PLC, HMI, control
 systems, troubleshooting and maintenance.
 </p>
+
 </div>
 
+
 <div class="card">
-<div class="card-icon">📡</div>
-<h3>Instrumentation</h3>
+
+<div class="card-icon">
+📡
+</div>
+
+<h3>
+Instrumentation
+</h3>
+
 <p>
 Practical exposure to sensors, measurement systems,
 testing, protection and electrical instrumentation.
 </p>
+
 </div>
+
 
 </div>
 
 </section>
 
 
+<!-- ================= EXPERIENCE ================= -->
+
 <section id="experience">
 
-<div class="section-label">EXPERIENCE</div>
+<div class="section-label">
+EXPERIENCE
+</div>
 
-<h2 class="title">Professional Journey</h2>
+<h2 class="title">
+Professional Journey
+</h2>
 
 <p class="subtitle">
 My engineering training and professional experience.
@@ -474,16 +721,21 @@ My engineering training and professional experience.
 
 <div class="timeline">
 
+
 <div class="timeline-item">
 
-<div class="timeline-date">2026</div>
+<div class="timeline-date">
+2026 – Present
+</div>
 
-<h3>Graduate Engineer Trainee</h3>
+<h3>
+Graduate Engineer Trainee
+</h3>
 
 <p>
-MAPCO / MEPCO — Engineering training involving AMI,
-metering, protection, instrumentation, testing and
-power distribution systems.
+MAPCO / MEPCO — Engineering training involving Advanced
+Metering Infrastructure (AMI), smart metering, protection,
+instrumentation, testing and power distribution systems.
 </p>
 
 </div>
@@ -491,27 +743,58 @@ power distribution systems.
 
 <div class="timeline-item">
 
-<div class="timeline-date">INDUSTRIAL EXPERIENCE</div>
+<div class="timeline-date">
+2025 – 2026
+</div>
 
-<h3>Electronics & Automation Engineering</h3>
+<h3>
+Management Trainee Engineer
+</h3>
 
 <p>
-Industrial electronics, PLC programming, HMI systems,
-preventive maintenance, troubleshooting and control systems.
+Industrial electronics and automation experience involving
+PLC programming, HMI systems, preventive maintenance,
+troubleshooting and industrial control systems.
 </p>
 
 </div>
+
+
+<div class="timeline-item">
+
+<div class="timeline-date">
+2024
+</div>
+
+<h3>
+Engineering Intern
+</h3>
+
+<p>
+Practical exposure to power distribution systems,
+metering and testing, protection and instrumentation,
+substations and electrical equipment.
+</p>
+
+</div>
+
 
 </div>
 
 </section>
 
 
+<!-- ================= PROJECTS ================= -->
+
 <section id="projects" class="project">
 
-<div class="section-label">SELECTED WORK</div>
+<div class="section-label">
+SELECTED WORK
+</div>
 
-<h2 class="title">Featured Projects</h2>
+<h2 class="title">
+Featured Projects
+</h2>
 
 <p class="subtitle">
 Engineering, research and technology projects.
@@ -519,9 +802,12 @@ Engineering, research and technology projects.
 
 <div class="cards">
 
+
 <div class="project-card">
 
-<h3>EEG-Based Brain Monitoring</h3>
+<h3>
+EEG-Based Brain Monitoring
+</h3>
 
 <p>
 Advanced EEG-based classification of harmful neural
@@ -543,7 +829,9 @@ deep-learning architecture.
 
 <div class="project-card">
 
-<h3>Advanced Metering Infrastructure</h3>
+<h3>
+Advanced Metering Infrastructure
+</h3>
 
 <p>
 Study of smart-meter communication, meter data collection,
@@ -565,7 +853,9 @@ metering infrastructure.
 
 <div class="project-card">
 
-<h3>Protection & Instrumentation</h3>
+<h3>
+Protection & Instrumentation
+</h3>
 
 <p>
 Practical exposure to protective relays, CT/PT testing,
@@ -584,16 +874,23 @@ electrical protection systems.
 
 </div>
 
+
 </div>
 
 </section>
 
 
+<!-- ================= SKILLS ================= -->
+
 <section id="skills">
 
-<div class="section-label">EXPERTISE</div>
+<div class="section-label">
+EXPERTISE
+</div>
 
-<h2 class="title">Technical Skills</h2>
+<h2 class="title">
+Technical Skills
+</h2>
 
 <p class="subtitle">
 Tools, technologies and engineering areas.
@@ -602,17 +899,29 @@ Tools, technologies and engineering areas.
 <div class="skills">
 
 <span class="skill">Power Systems</span>
+
 <span class="skill">Electrical Protection</span>
+
 <span class="skill">Instrumentation</span>
+
 <span class="skill">PLC</span>
+
 <span class="skill">HMI</span>
+
 <span class="skill">SCADA</span>
+
 <span class="skill">Industrial Automation</span>
+
 <span class="skill">Smart Metering</span>
+
 <span class="skill">MATLAB</span>
+
 <span class="skill">Python</span>
+
 <span class="skill">TensorFlow</span>
+
 <span class="skill">Circuit Design</span>
+
 <span class="skill">Electrical Testing</span>
 
 </div>
@@ -620,28 +929,47 @@ Tools, technologies and engineering areas.
 </section>
 
 
+<!-- ================= CONTACT ================= -->
+
 <section id="contact" class="contact">
 
-<div class="section-label">GET IN TOUCH</div>
+<div class="section-label">
+GET IN TOUCH
+</div>
 
-<h2 class="title">Let's Connect</h2>
+<h2 class="title">
+Let's Connect
+</h2>
 
 <p class="subtitle">
 I'm open to professional opportunities, engineering
 projects, collaboration and networking.
 </p>
 
-<a href="mailto:your-email@example.com" class="btn primary">
+<a
+href="mailto:your-email@example.com"
+class="btn primary"
+>
 Email Me
 </a>
 
+
 <div class="socials">
 
-<a href="#" class="social">
+<a
+href="#"
+class="social"
+>
 LinkedIn
 </a>
 
-<a href="https://github.com/hassaanshahid944" class="social">
+
+<a
+href="https://github.com/hassaanshahid944"
+class="social"
+target="_blank"
+rel="noopener"
+>
 GitHub
 </a>
 
@@ -650,8 +978,12 @@ GitHub
 </section>
 
 
+<!-- ================= FOOTER ================= -->
+
 <footer>
+
 © 2026 Muhammad Hassaan Shahid • Electrical & Electronics Engineer
+
 </footer>
 
 </body>
