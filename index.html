@@ -11,9 +11,9 @@ content="Muhammad Hassaan Shahid - Electrical & Electronics Engineer specializin
 
 <style>
 
-/* =========================================================
+/* =========================
    RESET
-========================================================= */
+========================= */
 
 *{
     margin:0;
@@ -31,12 +31,11 @@ body{
         -apple-system,
         BlinkMacSystemFont,
         "Segoe UI",
-        Roboto,
         Arial,
         sans-serif;
 
-    background:#050916;
-    color:#ffffff;
+    background:#050914;
+    color:#f4f7fb;
     line-height:1.6;
     overflow-x:hidden;
 }
@@ -57,73 +56,40 @@ img{
 }
 
 
-/* =========================================================
+/* =========================
    COLORS
-========================================================= */
+========================= */
 
 :root{
-    --bg:#050916;
-    --bg2:#081120;
-    --card:#0c1628;
-    --card2:#101d32;
-
-    --blue:#43baff;
-    --blue2:#1798ed;
-    --cyan:#64d1ff;
-
-    --white:#ffffff;
-    --text:#dbe7f7;
-    --muted:#91a2bd;
-
-    --border:rgba(83,190,255,.18);
+    --bg:#050914;
+    --bg2:#07111f;
+    --card:#0c1626;
+    --card2:#101d30;
+    --blue:#39bdf8;
+    --blue2:#5dd4ff;
+    --white:#f5f7fb;
+    --text:#aebbd0;
+    --border:rgba(93,212,255,.18);
 }
 
 
-/* =========================================================
-   BACKGROUND EFFECT
-========================================================= */
-
-body::before{
-    content:"";
-    position:fixed;
-    width:600px;
-    height:600px;
-    top:10%;
-    left:50%;
-    transform:translateX(-50%);
-    background:radial-gradient(
-        circle,
-        rgba(21,156,230,.13),
-        transparent 68%
-    );
-    pointer-events:none;
-    z-index:-1;
-}
-
-
-/* =========================================================
+/* =========================
    NAVBAR
-========================================================= */
+========================= */
 
 header{
     position:fixed;
     top:0;
     left:0;
     width:100%;
-    height:78px;
-
-    background:rgba(5,9,22,.88);
-    backdrop-filter:blur(14px);
-    -webkit-backdrop-filter:blur(14px);
-
-    border-bottom:1px solid rgba(255,255,255,.07);
-
-    z-index:1000;
+    z-index:999;
+    background:rgba(5,9,20,.92);
+    backdrop-filter:blur(15px);
+    border-bottom:1px solid rgba(255,255,255,.08);
 }
 
 .navbar{
-    height:78px;
-
+    height:82px;
     display:flex;
     align-items:center;
     justify-content:space-between;
@@ -132,6 +98,7 @@ header{
 .logo{
     font-size:30px;
     font-weight:800;
+    color:white;
     letter-spacing:-1px;
 }
 
@@ -141,137 +108,113 @@ header{
 
 .nav-links{
     display:flex;
+    gap:34px;
     align-items:center;
-    gap:32px;
-    list-style:none;
 }
 
 .nav-links a{
-    color:#b8c7dc;
+    color:#b9c5d7;
+    font-size:16px;
     font-weight:600;
-    font-size:15px;
-
-    transition:.3s ease;
+    transition:.3s;
 }
 
 .nav-links a:hover{
     color:var(--blue);
 }
 
-
-/* =========================================================
-   MOBILE MENU
-========================================================= */
-
 .menu-btn{
     display:none;
-
-    background:none;
-    border:none;
-
-    color:white;
     font-size:28px;
+    color:white;
     cursor:pointer;
 }
 
 
-/* =========================================================
+/* =========================
    HERO
-========================================================= */
+========================= */
 
 .hero{
     min-height:100vh;
-
+    padding-top:82px;
     display:flex;
     align-items:center;
     justify-content:center;
-
     text-align:center;
 
-    padding:
-        130px 20px
-        90px;
+    background:
+        radial-gradient(
+            circle at 50% 40%,
+            rgba(20,150,220,.12),
+            transparent 38%
+        ),
+        radial-gradient(
+            circle at 80% 70%,
+            rgba(0,100,170,.08),
+            transparent 30%
+        ),
+        var(--bg);
 
     position:relative;
+    overflow:hidden;
+}
+
+.hero::before{
+    content:"";
+    position:absolute;
+    width:700px;
+    height:700px;
+    border-radius:50%;
+    background:rgba(20,150,220,.04);
+    filter:blur(100px);
+    pointer-events:none;
 }
 
 .hero-content{
+    position:relative;
+    z-index:2;
     width:100%;
-    max-width:1000px;
 }
-
-
-/* =========================================================
-   PROFILE IMAGE
-========================================================= */
 
 .profile-container{
     width:310px;
     height:310px;
-
-    margin:0 auto 55px;
-
-    position:relative;
+    margin:30px auto 70px;
+    padding:7px;
 
     border-radius:50%;
 
-    padding:8px;
-
-    background:linear-gradient(
-        135deg,
-        #43baff,
-        #1677b5,
-        #43baff
-    );
+    background:
+        linear-gradient(
+            135deg,
+            #39bdf8,
+            #1688c8,
+            #39bdf8
+        );
 
     box-shadow:
-        0 0 30px rgba(67,186,255,.35),
-        0 0 80px rgba(67,186,255,.12);
+        0 0 25px rgba(57,189,248,.45),
+        0 0 80px rgba(57,189,248,.18);
 
-    animation:floatImage 5s ease-in-out infinite;
+    position:relative;
 }
-
-
-/* Outer ring */
 
 .profile-container::before{
     content:"";
-
     position:absolute;
-
     inset:-18px;
-
-    border:1px solid rgba(67,186,255,.22);
-
     border-radius:50%;
+    border:1px solid rgba(57,189,248,.20);
 }
-
-
-/* Second ring */
 
 .profile-container::after{
     content:"";
-
     position:absolute;
-
     inset:-35px;
-
-    border:1px solid rgba(67,186,255,.08);
-
     border-radius:50%;
+    border:1px solid rgba(57,189,248,.08);
 }
-
-
-/*
-IMPORTANT:
-Your GitHub repository contains:
-
-profile.jpeg
-
-Therefore we use:
-
-./profile.jpeg
-*/
 
 .profile-photo{
     width:100%;
@@ -288,56 +231,24 @@ Therefore we use:
 }
 
 
-/* =========================================================
-   IMAGE ANIMATION
-========================================================= */
-
-@keyframes floatImage{
-
-    0%{
-        transform:translateY(0);
-    }
-
-    50%{
-        transform:translateY(-10px);
-    }
-
-    100%{
-        transform:translateY(0);
-    }
-
-}
-
-
-/* =========================================================
+/* =========================
    HERO TEXT
-========================================================= */
+========================= */
 
 .hero-label{
     color:var(--blue);
-
-    font-size:18px;
+    font-size:20px;
     font-weight:800;
-
-    letter-spacing:5px;
+    letter-spacing:6px;
     text-transform:uppercase;
-
-    margin-bottom:24px;
+    margin-bottom:25px;
 }
 
 .hero h1{
-    font-size:clamp(
-        55px,
-        8vw,
-        100px
-    );
-
-    line-height:.98;
-
-    letter-spacing:-4px;
-
+    font-size:72px;
+    line-height:1.02;
+    letter-spacing:-3px;
     font-weight:850;
-
     margin-bottom:30px;
 }
 
@@ -346,593 +257,423 @@ Therefore we use:
 }
 
 .hero-subtitle{
-    color:#aab9ce;
-
+    color:#aebbd0;
     font-size:27px;
     font-weight:700;
-
     margin-bottom:28px;
 }
 
 .hero-description{
-    max-width:760px;
-
+    max-width:850px;
     margin:auto;
-
-    color:#91a2bd;
-
+    color:#9ba9bd;
     font-size:19px;
-
     line-height:1.8;
 }
 
-
-/* =========================================================
-   BUTTONS
-========================================================= */
-
 .hero-buttons{
     margin-top:40px;
-
     display:flex;
     justify-content:center;
-    gap:16px;
-
+    gap:18px;
     flex-wrap:wrap;
 }
 
 .btn{
-    display:inline-flex;
-
-    align-items:center;
-    justify-content:center;
-
-    padding:14px 28px;
-
+    padding:15px 28px;
     border-radius:10px;
-
+    font-size:16px;
     font-weight:700;
-
-    transition:.3s ease;
+    border:1px solid var(--blue);
+    transition:.3s;
+    display:inline-block;
 }
 
 .btn-primary{
     background:var(--blue);
-    color:#03101b;
-
-    box-shadow:
-        0 8px 30px rgba(67,186,255,.2);
+    color:#03101a;
 }
 
 .btn-primary:hover{
     transform:translateY(-3px);
-    box-shadow:
-        0 12px 35px rgba(67,186,255,.35);
+    box-shadow:0 10px 30px rgba(57,189,248,.25);
 }
 
 .btn-outline{
-    border:1px solid rgba(67,186,255,.5);
+    background:transparent;
     color:var(--blue);
 }
 
 .btn-outline:hover{
-    background:rgba(67,186,255,.1);
+    background:rgba(57,189,248,.08);
     transform:translateY(-3px);
 }
 
 
-/* =========================================================
-   SECTION
-========================================================= */
+/* =========================
+   SECTIONS
+========================= */
 
 section{
     padding:110px 0;
-    scroll-margin-top:80px;
+}
+
+.section-label{
+    color:var(--blue);
+    font-size:14px;
+    font-weight:800;
+    letter-spacing:4px;
+    text-transform:uppercase;
+    margin-bottom:12px;
 }
 
 .section-title{
-    text-align:center;
-
-    margin-bottom:55px;
+    font-size:45px;
+    margin-bottom:20px;
+    line-height:1.2;
 }
 
-.section-title span{
-    color:var(--blue);
-
-    font-size:14px;
-
-    font-weight:800;
-
-    letter-spacing:4px;
-
-    text-transform:uppercase;
-}
-
-.section-title h2{
-    font-size:46px;
-
-    margin-top:8px;
-
-    letter-spacing:-1px;
-}
-
-.section-title p{
-    color:var(--muted);
-
-    max-width:650px;
-
-    margin:15px auto 0;
-
+.section-description{
+    color:var(--text);
+    max-width:750px;
     font-size:17px;
 }
 
+.section-heading{
+    margin-bottom:55px;
+}
 
-/* =========================================================
+
+/* =========================
    ABOUT
-========================================================= */
+========================= */
+
+.about{
+    background:#07101d;
+}
 
 .about-grid{
     display:grid;
-
-    grid-template-columns:
-        1.2fr
-        .8fr;
-
-    gap:35px;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
+    align-items:center;
 }
 
-.card{
-    background:
-        linear-gradient(
-            145deg,
-            rgba(16,29,50,.95),
-            rgba(8,17,32,.95)
-        );
+.about-text p{
+    color:#aab8ca;
+    margin-bottom:20px;
+    font-size:17px;
+}
 
+.info-box{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:18px;
+}
+
+.info-card{
+    background:var(--card);
     border:1px solid var(--border);
-
-    border-radius:18px;
-
-    padding:35px;
-
-    box-shadow:
-        0 20px 60px rgba(0,0,0,.18);
+    border-radius:14px;
+    padding:24px;
 }
 
-.card h3{
-    font-size:24px;
-
-    margin-bottom:18px;
+.info-card h3{
+    color:var(--blue);
+    font-size:14px;
+    margin-bottom:7px;
+    text-transform:uppercase;
+    letter-spacing:1px;
 }
 
-.card p{
-    color:#9eafc6;
-
-    line-height:1.9;
-}
-
-.info-list{
-    list-style:none;
-}
-
-.info-list li{
-    padding:13px 0;
-
-    border-bottom:1px solid rgba(255,255,255,.06);
-
-    color:#b6c5d9;
-}
-
-.info-list li:last-child{
-    border-bottom:none;
-}
-
-.info-list strong{
-    color:white;
+.info-card p{
+    color:#dce4ef;
+    font-size:16px;
 }
 
 
-/* =========================================================
+/* =========================
    SKILLS
-========================================================= */
+========================= */
 
 .skills-grid{
     display:grid;
-
-    grid-template-columns:
-        repeat(4,1fr);
-
-    gap:20px;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
 }
 
 .skill-card{
-    background:#0b1526;
+    background:linear-gradient(
+        145deg,
+        #0b1627,
+        #0a1321
+    );
 
     border:1px solid var(--border);
-
-    border-radius:15px;
-
-    padding:28px 22px;
-
-    text-align:center;
-
-    transition:.3s ease;
+    border-radius:16px;
+    padding:30px;
+    transition:.3s;
 }
 
 .skill-card:hover{
     transform:translateY(-7px);
-
-    border-color:
-        rgba(67,186,255,.45);
-
-    box-shadow:
-        0 15px 40px rgba(0,0,0,.25);
+    border-color:rgba(57,189,248,.45);
+    box-shadow:0 15px 40px rgba(0,0,0,.25);
 }
 
 .skill-icon{
-    font-size:35px;
-
-    margin-bottom:15px;
+    font-size:32px;
+    margin-bottom:18px;
 }
 
 .skill-card h3{
-    font-size:18px;
-
-    margin-bottom:8px;
+    font-size:21px;
+    margin-bottom:10px;
 }
 
 .skill-card p{
-    color:var(--muted);
-
-    font-size:14px;
+    color:var(--text);
 }
 
 
-/* =========================================================
+/* =========================
    EXPERIENCE
-========================================================= */
+========================= */
+
+.experience{
+    background:#07101d;
+}
 
 .timeline{
-    max-width:900px;
-
-    margin:auto;
-
     position:relative;
+    max-width:1000px;
+    margin:auto;
 }
 
 .timeline::before{
     content:"";
-
     position:absolute;
-
     left:18px;
-
     top:0;
     bottom:0;
-
     width:2px;
-
-    background:
-        linear-gradient(
-            to bottom,
-            var(--blue),
-            transparent
-        );
+    background:rgba(57,189,248,.25);
 }
 
 .timeline-item{
     position:relative;
-
-    padding-left:60px;
-
-    margin-bottom:40px;
+    padding-left:65px;
+    margin-bottom:45px;
 }
 
 .timeline-dot{
     position:absolute;
-
-    left:8px;
-
-    top:8px;
-
-    width:22px;
-    height:22px;
-
+    left:9px;
+    top:5px;
+    width:20px;
+    height:20px;
     border-radius:50%;
-
     background:var(--blue);
-
-    box-shadow:
-        0 0 20px rgba(67,186,255,.6);
+    box-shadow:0 0 20px rgba(57,189,248,.5);
 }
 
-.timeline-content{
-    background:#0b1526;
-
+.timeline-card{
+    background:var(--card);
     border:1px solid var(--border);
-
     border-radius:16px;
-
-    padding:28px;
+    padding:30px;
 }
 
-.timeline-content h3{
-    font-size:22px;
+.timeline-card h3{
+    font-size:23px;
+    margin-bottom:4px;
 }
 
-.timeline-content h4{
+.company{
     color:var(--blue);
-
-    margin-top:5px;
-
-    font-size:16px;
+    font-weight:700;
+    margin-bottom:4px;
 }
 
-.timeline-date{
-    display:inline-block;
-
-    color:#8ea2bb;
-
+.date{
+    color:#78879d;
     font-size:14px;
-
-    margin:10px 0 15px;
+    margin-bottom:18px;
 }
 
-.timeline-content ul{
+.timeline-card ul{
     padding-left:20px;
-
-    color:#a4b3c7;
+    color:#aab8ca;
 }
 
-.timeline-content li{
-    margin:7px 0;
+.timeline-card li{
+    margin-bottom:9px;
 }
 
 
-/* =========================================================
+/* =========================
    EDUCATION
-========================================================= */
+========================= */
 
 .education-card{
-    max-width:900px;
+    background:linear-gradient(
+        145deg,
+        #0c1728,
+        #091320
+    );
 
+    border:1px solid var(--border);
+    border-radius:18px;
+    padding:35px;
+    max-width:950px;
     margin:auto;
-
-    display:flex;
-
-    gap:25px;
-
-    align-items:flex-start;
-}
-
-.education-icon{
-    min-width:65px;
-    height:65px;
-
-    display:flex;
-
-    align-items:center;
-    justify-content:center;
-
-    border-radius:15px;
-
-    background:rgba(67,186,255,.1);
-
-    border:1px solid
-        rgba(67,186,255,.3);
-
-    font-size:28px;
 }
 
 .education-card h3{
-    font-size:23px;
+    font-size:24px;
+    margin-bottom:8px;
 }
 
-.education-card h4{
+.degree{
     color:var(--blue);
-
-    margin:4px 0 8px;
+    font-weight:700;
+    margin-bottom:8px;
 }
 
 .education-card p{
-    color:var(--muted);
+    color:var(--text);
 }
 
 
-/* =========================================================
+/* =========================
    PROJECTS
-========================================================= */
+========================= */
 
-.projects-grid{
+.projects{
+    background:#07101d;
+}
+
+.project-grid{
     display:grid;
-
-    grid-template-columns:
-        repeat(3,1fr);
-
-    gap:22px;
+    grid-template-columns:repeat(2,1fr);
+    gap:25px;
 }
 
 .project-card{
-    background:#0b1526;
-
+    background:var(--card);
     border:1px solid var(--border);
-
     border-radius:17px;
-
-    overflow:hidden;
-
-    transition:.3s ease;
-}
-
-.project-card:hover{
-    transform:translateY(-7px);
-
-    border-color:
-        rgba(67,186,255,.4);
-}
-
-.project-top{
-    height:150px;
-
-    display:flex;
-
-    align-items:center;
-    justify-content:center;
-
-    background:
-        radial-gradient(
-            circle,
-            rgba(67,186,255,.15),
-            transparent 65%
-        );
-
-    font-size:50px;
-}
-
-.project-content{
-    padding:25px;
-}
-
-.project-content h3{
-    font-size:21px;
-
-    margin-bottom:10px;
-}
-
-.project-content p{
-    color:var(--muted);
-
-    font-size:15px;
-
-    line-height:1.7;
-}
-
-
-/* =========================================================
-   CONTACT
-========================================================= */
-
-.contact-box{
-    max-width:900px;
-
-    margin:auto;
-
-    text-align:center;
-
-    background:
-        linear-gradient(
-            135deg,
-            rgba(17,40,67,.8),
-            rgba(7,16,31,.9)
-        );
-
-    border:1px solid var(--border);
-
-    border-radius:22px;
-
-    padding:55px 30px;
-}
-
-.contact-box h2{
-    font-size:40px;
-
-    margin-bottom:15px;
-}
-
-.contact-box p{
-    color:var(--muted);
-
-    max-width:600px;
-
-    margin:0 auto 30px;
-}
-
-.contact-links{
-    display:flex;
-
-    justify-content:center;
-
-    flex-wrap:wrap;
-
-    gap:15px;
-}
-
-.contact-link{
-    padding:12px 20px;
-
-    border:1px solid
-        rgba(67,186,255,.25);
-
-    border-radius:10px;
-
-    color:#bdd0e7;
-
+    padding:32px;
     transition:.3s;
 }
 
-.contact-link:hover{
+.project-card:hover{
+    transform:translateY(-6px);
+    border-color:rgba(57,189,248,.45);
+}
+
+.project-number{
     color:var(--blue);
+    font-size:14px;
+    font-weight:800;
+    letter-spacing:2px;
+    margin-bottom:15px;
+}
 
-    border-color:var(--blue);
+.project-card h3{
+    font-size:23px;
+    margin-bottom:12px;
+}
 
-    background:
-        rgba(67,186,255,.06);
+.project-card p{
+    color:var(--text);
 }
 
 
-/* =========================================================
-   CV SECTION
-========================================================= */
+/* =========================
+   CV
+========================= */
 
 .cv-section{
     text-align:center;
 }
 
 .cv-box{
-    max-width:700px;
-
+    max-width:850px;
     margin:auto;
-
-    padding:40px;
-
-    background:#0b1526;
-
+    background:var(--card);
     border:1px solid var(--border);
-
-    border-radius:18px;
+    border-radius:20px;
+    padding:50px 30px;
 }
 
-.cv-box h3{
-    font-size:27px;
-
-    margin-bottom:10px;
+.cv-box h2{
+    font-size:35px;
+    margin-bottom:15px;
 }
 
 .cv-box p{
-    color:var(--muted);
-
-    margin-bottom:25px;
+    color:var(--text);
+    margin-bottom:30px;
 }
 
 
-/* =========================================================
+/* =========================
+   CONTACT
+========================= */
+
+.contact{
+    background:#07101d;
+}
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+}
+
+.contact-card{
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:16px;
+    padding:30px;
+    text-align:center;
+}
+
+.contact-icon{
+    font-size:30px;
+    margin-bottom:14px;
+}
+
+.contact-card h3{
+    margin-bottom:8px;
+}
+
+.contact-card p,
+.contact-card a{
+    color:var(--text);
+    word-break:break-word;
+}
+
+.contact-card a:hover{
+    color:var(--blue);
+}
+
+
+/* =========================
    FOOTER
-========================================================= */
+========================= */
 
 footer{
-    border-top:1px solid rgba(255,255,255,.07);
-
-    padding:35px 20px;
-
+    background:#040811;
+    border-top:1px solid rgba(255,255,255,.06);
+    padding:30px 0;
     text-align:center;
-
-    color:#71839c;
-
-    background:#040812;
 }
 
-footer strong{
-    color:white;
+footer p{
+    color:#78879d;
+    font-size:14px;
 }
 
 footer span{
@@ -940,152 +681,140 @@ footer span{
 }
 
 
-/* =========================================================
-   REVEAL ANIMATION
-========================================================= */
-
-.reveal{
-    opacity:0;
-
-    transform:translateY(30px);
-
-    transition:
-        opacity .8s ease,
-        transform .8s ease;
-}
-
-.reveal.active{
-    opacity:1;
-
-    transform:translateY(0);
-}
-
-
-/* =========================================================
-   RESPONSIVE - TABLET
-========================================================= */
+/* =========================
+   RESPONSIVE
+========================= */
 
 @media(max-width:900px){
 
     .nav-links{
-        gap:18px;
+        position:absolute;
+        top:82px;
+        left:0;
+        width:100%;
+        background:#050914;
+        border-bottom:1px solid rgba(255,255,255,.08);
+
+        display:none;
+        flex-direction:column;
+        padding:25px;
+        gap:22px;
     }
 
-    .skills-grid{
-        grid-template-columns:
-            repeat(2,1fr);
-    }
-
-    .projects-grid{
-        grid-template-columns:
-            repeat(2,1fr);
-    }
-
-    .about-grid{
-        grid-template-columns:1fr;
-    }
-
-}
-
-
-/* =========================================================
-   RESPONSIVE - MOBILE
-========================================================= */
-
-@media(max-width:700px){
-
-    header{
-        height:70px;
-    }
-
-    .navbar{
-        height:70px;
-    }
-
-    .logo{
-        font-size:26px;
+    .nav-links.active{
+        display:flex;
     }
 
     .menu-btn{
         display:block;
     }
 
-    .nav-links{
-        display:none;
-
-        position:absolute;
-
-        top:70px;
-        left:0;
-
-        width:100%;
-
-        background:#060b18;
-
-        padding:20px;
-
-        flex-direction:column;
-
-        border-bottom:1px solid
-            rgba(255,255,255,.08);
-    }
-
-    .nav-links.show{
-        display:flex;
-    }
-
     .hero{
-        padding-top:120px;
+        padding-left:20px;
+        padding-right:20px;
     }
 
     .profile-container{
-        width:250px;
-        height:250px;
-
-        margin-bottom:55px;
+        width:270px;
+        height:270px;
+        margin-bottom:60px;
     }
 
     .hero-label{
-        font-size:13px;
-
-        letter-spacing:3px;
+        font-size:15px;
+        letter-spacing:4px;
     }
 
     .hero h1{
-        font-size:
-            clamp(48px,14vw,72px);
-
-        letter-spacing:-3px;
+        font-size:52px;
     }
 
     .hero-subtitle{
-        font-size:21px;
+        font-size:22px;
     }
 
     .hero-description{
-        font-size:16px;
+        font-size:17px;
+    }
 
-        line-height:1.75;
+    .about-grid{
+        grid-template-columns:1fr;
+    }
+
+    .skills-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .project-grid{
+        grid-template-columns:1fr;
+    }
+
+    .contact-grid{
+        grid-template-columns:1fr;
+    }
+}
+
+
+@media(max-width:600px){
+
+    .container{
+        width:88%;
     }
 
     section{
         padding:80px 0;
     }
 
-    .section-title h2{
-        font-size:36px;
+    .navbar{
+        height:70px;
+    }
+
+    .nav-links{
+        top:70px;
+    }
+
+    .hero{
+        min-height:100vh;
+        padding-top:80px;
+    }
+
+    .profile-container{
+        width:240px;
+        height:240px;
+        margin:30px auto 55px;
+    }
+
+    .hero-label{
+        font-size:13px;
+        letter-spacing:3px;
+        line-height:1.7;
+    }
+
+    .hero h1{
+        font-size:46px;
+        letter-spacing:-2px;
+    }
+
+    .hero-subtitle{
+        font-size:20px;
+        line-height:1.5;
+    }
+
+    .hero-description{
+        font-size:16px;
+        line-height:1.7;
+    }
+
+    .section-title{
+        font-size:35px;
     }
 
     .skills-grid{
         grid-template-columns:1fr;
     }
 
-    .projects-grid{
+    .info-box{
         grid-template-columns:1fr;
-    }
-
-    .education-card{
-        flex-direction:column;
     }
 
     .timeline-item{
@@ -1093,69 +822,21 @@ footer span{
     }
 
     .timeline::before{
-        left:10px;
+        left:12px;
     }
 
     .timeline-dot{
-        left:0;
+        left:3px;
     }
 
-    .card{
-        padding:25px;
+    .hero-buttons{
+        flex-direction:column;
+        align-items:center;
     }
 
-    .contact-box{
-        padding:40px 20px;
-    }
-
-    .contact-box h2{
-        font-size:32px;
-    }
-
-}
-
-
-/* =========================================================
-   VERY SMALL PHONES
-========================================================= */
-
-@media(max-width:400px){
-
-    .profile-container{
+    .btn{
         width:220px;
-        height:220px;
     }
-
-    .hero h1{
-        font-size:45px;
-    }
-
-    .hero-subtitle{
-        font-size:19px;
-    }
-
-}
-
-
-/* =========================================================
-   REDUCED MOTION
-========================================================= */
-
-@media(prefers-reduced-motion:reduce){
-
-    *{
-        scroll-behavior:auto !important;
-    }
-
-    .profile-container{
-        animation:none;
-    }
-
-    .reveal{
-        opacity:1;
-        transform:none;
-    }
-
 }
 
 </style>
@@ -1165,146 +846,101 @@ footer span{
 <body>
 
 
-<!-- =======================================================
-     NAVIGATION
-======================================================= -->
+<!-- =========================
+     NAVBAR
+========================= -->
 
 <header>
 
-<nav class="navbar container">
+<div class="container navbar">
 
-    <a href="#home" class="logo">
-        Hassaan<span>.</span>
-    </a>
+<a href="#home" class="logo">
+    Hassaan<span>.</span>
+</a>
 
-    <button
-        class="menu-btn"
-        id="menuBtn"
-        aria-label="Open Menu">
-        ☰
-    </button>
+<div class="menu-btn" onclick="toggleMenu()">
+    ☰
+</div>
 
-    <ul class="nav-links" id="navLinks">
+<nav class="nav-links" id="navLinks">
 
-        <li>
-            <a href="#home">Home</a>
-        </li>
-
-        <li>
-            <a href="#about">About</a>
-        </li>
-
-        <li>
-            <a href="#skills">Skills</a>
-        </li>
-
-        <li>
-            <a href="#experience">Experience</a>
-        </li>
-
-        <li>
-            <a href="#education">Education</a>
-        </li>
-
-        <li>
-            <a href="#projects">Projects</a>
-        </li>
-
-        <li>
-            <a href="#contact">Contact</a>
-        </li>
-
-    </ul>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#experience">Experience</a>
+<a href="#education">Education</a>
+<a href="#projects">Projects</a>
+<a href="#contact">Contact</a>
 
 </nav>
+
+</div>
 
 </header>
 
 
 
-<!-- =======================================================
+<!-- =========================
      HERO
-======================================================= -->
+========================= -->
 
-<main>
+<section class="hero" id="home">
 
-<section id="home" class="hero">
-
-<div class="hero-content reveal">
+<div class="hero-content container">
 
 
-    <!-- PROFILE IMAGE -->
+<!-- PROFILE IMAGE -->
 
-    <div class="profile-container">
+<div class="profile-container">
 
-        <img
-            src="./profile.jpeg"
-            alt="Muhammad Hassaan Shahid"
-            class="profile-photo"
-            width="310"
-            height="310"
-        >
+<img
+    src="./PASSPORT%20PICTURE.jpeg"
+    alt="Muhammad Hassaan Shahid"
+    class="profile-photo"
+>
 
-    </div>
+</div>
 
 
-    <!-- HERO TEXT -->
-
-    <div class="hero-label">
-        Electrical & Electronics Engineer
-    </div>
+<div class="hero-label">
+    Electrical & Electronics Engineer
+</div>
 
 
-    <h1>
-        Muhammad<br>
-        Hassaan <span class="highlight">Shahid</span>
-    </h1>
+<h1>
+    Muhammad<br>
+    <span class="highlight">Hassaan Shahid</span>
+</h1>
 
 
-    <div class="hero-subtitle">
-        Power Systems • Automation • Instrumentation
-    </div>
+<div class="hero-subtitle">
+    Power Systems • Automation • Instrumentation
+</div>
 
 
-    <p class="hero-description">
-
-        Electrical and Electronics Engineer focused on
-        power systems, industrial automation,
-        instrumentation, smart metering and modern
-        engineering technologies.
-
-    </p>
+<p class="hero-description">
+    Electrical and Electronics Engineer focused on
+    power systems, industrial automation,
+    instrumentation, smart metering and modern
+    engineering technologies.
+</p>
 
 
-    <div class="hero-buttons">
+<div class="hero-buttons">
 
-        <a
-            href="#contact"
-            class="btn btn-primary">
-            Let's Connect
-        </a>
+<a href="#about" class="btn btn-primary">
+    Explore My Portfolio
+</a>
 
-        <!--
-            IMPORTANT:
-            Your CV file in GitHub is CV.pdf
-        -->
+<a
+    href="./CV.pdf"
+    class="btn btn-outline"
+    target="_blank"
+>
+    View CV
+</a>
 
-        <a
-            href="./CV.pdf"
-            target="_blank"
-            rel="noopener"
-            class="btn btn-outline">
-            View CV
-        </a>
-
-        <a
-            href="./CV.pdf"
-            download="Muhammad_Hassaan_Shahid_CV.pdf"
-            class="btn btn-outline">
-            Download CV
-        </a>
-
-    </div>
+</div>
 
 
 </div>
@@ -1313,99 +949,87 @@ footer span{
 
 
 
-<!-- =======================================================
+<!-- =========================
      ABOUT
-======================================================= -->
+========================= -->
 
-<section id="about">
+<section class="about" id="about">
 
 <div class="container">
 
-    <div class="section-title reveal">
+<div class="section-heading">
 
-        <span>About Me</span>
+<div class="section-label">
+    About Me
+</div>
 
-        <h2>Engineering With Purpose</h2>
+<h2 class="section-title">
+    Engineering with Purpose
+</h2>
 
-        <p>
-            Combining electrical engineering knowledge
-            with practical industrial experience.
-        </p>
+<p class="section-description">
+    A motivated Electrical & Electronics Engineer
+    with practical exposure to power systems,
+    industrial automation, protection,
+    instrumentation and smart metering.
+</p>
 
-    </div>
-
-
-    <div class="about-grid">
-
-
-        <div class="card reveal">
-
-            <h3>Professional Profile</h3>
-
-            <p>
-
-                I am an Electrical and Electronics Engineer
-                with a strong foundation in power systems,
-                industrial automation, control systems,
-                instrumentation and smart metering.
-
-                <br><br>
-
-                My practical experience includes work with
-                PLC systems, HMI development, industrial
-                electronics, preventive maintenance,
-                metering systems, protection and
-                instrumentation equipment.
-
-                <br><br>
-
-                I am particularly interested in power
-                systems, automation, instrumentation,
-                smart-grid technologies and modern
-                engineering solutions.
-
-            </p>
-
-        </div>
+</div>
 
 
-        <div class="card reveal">
-
-            <h3>Quick Information</h3>
-
-            <ul class="info-list">
-
-                <li>
-                    <strong>Field:</strong>
-                    Electrical & Electronics Engineering
-                </li>
-
-                <li>
-                    <strong>Specialization:</strong>
-                    Electronics
-                </li>
-
-                <li>
-                    <strong>Focus:</strong>
-                    Power Systems & Automation
-                </li>
-
-                <li>
-                    <strong>Location:</strong>
-                    Multan, Pakistan
-                </li>
-
-                <li>
-                    <strong>PEC:</strong>
-                    Registered Engineer
-                </li>
-
-            </ul>
-
-        </div>
+<div class="about-grid">
 
 
-    </div>
+<div class="about-text">
+
+<p>
+I am Muhammad Hassaan Shahid, an Electrical &
+Electronics Engineer with a specialization in
+Electronics and a strong interest in Power Systems,
+Automation and Instrumentation.
+</p>
+
+<p>
+My practical experience includes industrial
+automation, PLC programming, electrical and
+electronic troubleshooting, smart metering,
+protection systems and instrumentation.
+</p>
+
+<p>
+I enjoy learning new technologies and applying
+engineering concepts to real-world industrial
+and power-system applications.
+</p>
+
+</div>
+
+
+<div class="info-box">
+
+<div class="info-card">
+<h3>Specialization</h3>
+<p>Electronics Engineering</p>
+</div>
+
+<div class="info-card">
+<h3>Focus</h3>
+<p>Power Systems</p>
+</div>
+
+<div class="info-card">
+<h3>Automation</h3>
+<p>PLC & HMI Systems</p>
+</div>
+
+<div class="info-card">
+<h3>Instrumentation</h3>
+<p>Protection & Control</p>
+</div>
+
+</div>
+
+</div>
 
 </div>
 
@@ -1413,144 +1037,122 @@ footer span{
 
 
 
-<!-- =======================================================
+<!-- =========================
      SKILLS
-======================================================= -->
+========================= -->
 
 <section id="skills">
 
 <div class="container">
 
-    <div class="section-title reveal">
+<div class="section-heading">
 
-        <span>Technical Skills</span>
+<div class="section-label">
+    Technical Skills
+</div>
 
-        <h2>What I Work With</h2>
+<h2 class="section-title">
+    What I Work With
+</h2>
 
-        <p>
-            Technical areas developed through academic
-            study and practical engineering experience.
-        </p>
+<p class="section-description">
+    A combination of electrical engineering,
+    electronics, automation, instrumentation
+    and modern technical tools.
+</p>
 
-    </div>
-
-
-    <div class="skills-grid">
-
-
-        <div class="skill-card reveal">
-
-            <div class="skill-icon">⚡</div>
-
-            <h3>Power Systems</h3>
-
-            <p>
-                Power distribution, grid systems,
-                protection and electrical equipment.
-            </p>
-
-        </div>
+</div>
 
 
-        <div class="skill-card reveal">
-
-            <div class="skill-icon">⚙️</div>
-
-            <h3>Industrial Automation</h3>
-
-            <p>
-                PLC programming, HMI,
-                control systems and automation.
-            </p>
-
-        </div>
+<div class="skills-grid">
 
 
-        <div class="skill-card reveal">
+<div class="skill-card">
 
-            <div class="skill-icon">🎛️</div>
+<div class="skill-icon">⚡</div>
 
-            <h3>Instrumentation</h3>
+<h3>Power Systems</h3>
 
-            <p>
-                Sensors, measurement systems,
-                testing and calibration.
-            </p>
+<p>
+Power system fundamentals, transmission,
+distribution, substations, protection and
+power equipment.
+</p>
 
-        </div>
-
-
-        <div class="skill-card reveal">
-
-            <div class="skill-icon">🔌</div>
-
-            <h3>Protection</h3>
-
-            <p>
-                Protective relays, CTs, PTs,
-                circuit breakers and testing.
-            </p>
-
-        </div>
+</div>
 
 
-        <div class="skill-card reveal">
+<div class="skill-card">
 
-            <div class="skill-icon">📡</div>
+<div class="skill-icon">⚙️</div>
 
-            <h3>Smart Metering</h3>
+<h3>Industrial Automation</h3>
 
-            <p>
-                AMI, smart meters, MDC,
-                MDM and meter data analysis.
-            </p>
+<p>
+PLC programming, HMI development,
+industrial control systems and automation.
+</p>
 
-        </div>
-
-
-        <div class="skill-card reveal">
-
-            <div class="skill-icon">💻</div>
-
-            <h3>Programming</h3>
-
-            <p>
-                Python, MATLAB and
-                engineering software.
-            </p>
-
-        </div>
+</div>
 
 
-        <div class="skill-card reveal">
+<div class="skill-card">
 
-            <div class="skill-icon">🤖</div>
+<div class="skill-icon">🔧</div>
 
-            <h3>Machine Learning</h3>
+<h3>Instrumentation</h3>
 
-            <p>
-                TensorFlow, EfficientNet,
-                EEG analysis and classification.
-            </p>
+<p>
+Sensors, measurement systems,
+instrumentation and control applications.
+</p>
 
-        </div>
-
-
-        <div class="skill-card reveal">
-
-            <div class="skill-icon">🧰</div>
-
-            <h3>Engineering Tools</h3>
-
-            <p>
-                Proteus, Excel, MATLAB and
-                technical documentation.
-            </p>
-
-        </div>
+</div>
 
 
-    </div>
+<div class="skill-card">
+
+<div class="skill-icon">🛡️</div>
+
+<h3>Protection Systems</h3>
+
+<p>
+Protective relays, CTs, PTs, circuit breakers
+and substation protection equipment.
+</p>
+
+</div>
+
+
+<div class="skill-card">
+
+<div class="skill-icon">📡</div>
+
+<h3>Smart Metering</h3>
+
+<p>
+AMI, smart meters, meter data systems,
+communication and data analysis.
+</p>
+
+</div>
+
+
+<div class="skill-card">
+
+<div class="skill-icon">💻</div>
+
+<h3>Engineering Tools</h3>
+
+<p>
+MATLAB, Python, TensorFlow, Proteus,
+MS Excel and technical documentation.
+</p>
+
+</div>
+
+
+</div>
 
 </div>
 
@@ -1558,187 +1160,178 @@ footer span{
 
 
 
-<!-- =======================================================
+<!-- =========================
      EXPERIENCE
-======================================================= -->
+========================= -->
 
-<section id="experience">
+<section class="experience" id="experience">
 
 <div class="container">
 
-    <div class="section-title reveal">
+<div class="section-heading">
 
-        <span>Experience</span>
+<div class="section-label">
+    Professional Experience
+</div>
 
-        <h2>Professional Journey</h2>
+<h2 class="section-title">
+    My Engineering Journey
+</h2>
 
-    </div>
-
-
-    <div class="timeline">
-
-
-        <!-- MEPCO -->
-
-        <div class="timeline-item reveal">
-
-            <div class="timeline-dot"></div>
-
-            <div class="timeline-content">
-
-                <h3>
-                    Graduate Engineer Trainee
-                </h3>
-
-                <h4>
-                    MEPCO, Multan
-                </h4>
-
-                <span class="timeline-date">
-                    May 2026 – Present
-                </span>
-
-                <ul>
-
-                    <li>
-                        Supporting Advanced Metering
-                        Infrastructure (AMI) operations,
-                        smart metering systems and
-                        Meter Data Management activities.
-                    </li>
-
-                    <li>
-                        Assisting in meter data monitoring,
-                        validation, analysis and reporting.
-                    </li>
-
-                    <li>
-                        Supporting smart meter communication,
-                        system integration and troubleshooting.
-                    </li>
-
-                    <li>
-                        Gaining practical exposure to
-                        metering, protection and
-                        instrumentation systems.
-                    </li>
-
-                </ul>
-
-            </div>
-
-        </div>
+</div>
 
 
-
-        <!-- VOLKA -->
-
-        <div class="timeline-item reveal">
-
-            <div class="timeline-dot"></div>
-
-            <div class="timeline-content">
-
-                <h3>
-                    Management Trainee Engineer
-                </h3>
-
-                <h4>
-                    Volka Food International, Multan
-                </h4>
-
-                <span class="timeline-date">
-                    June 2025 – May 2026
-                </span>
-
-                <ul>
-
-                    <li>
-                        Designed, tested and troubleshot
-                        electronic circuits and automation
-                        systems.
-                    </li>
-
-                    <li>
-                        Performed preventive maintenance,
-                        root-cause analysis and process
-                        automation.
-                    </li>
-
-                    <li>
-                        Worked with Siemens and
-                        Allen-Bradley PLC systems.
-                    </li>
-
-                    <li>
-                        Worked on HMI development and
-                        industrial control systems.
-                    </li>
-
-                    <li>
-                        Prepared technical documentation,
-                        specifications and compliance reports.
-                    </li>
-
-                </ul>
-
-            </div>
-
-        </div>
+<div class="timeline">
 
 
+<!-- MEPCO -->
 
-        <!-- INTERNSHIP -->
+<div class="timeline-item">
 
-        <div class="timeline-item reveal">
+<div class="timeline-dot"></div>
 
-            <div class="timeline-dot"></div>
+<div class="timeline-card">
 
-            <div class="timeline-content">
+<h3>Graduate Engineer Trainee</h3>
 
-                <h3>
-                    Engineering Intern
-                </h3>
+<div class="company">
+    MEPCO, Multan
+</div>
 
-                <h4>
-                    MEPCO, Multan
-                </h4>
+<div class="date">
+    May 2026 – Present
+</div>
 
-                <span class="timeline-date">
-                    July 2024 – August 2024
-                </span>
+<ul>
 
-                <ul>
+<li>
+Supporting Advanced Metering Infrastructure
+(AMI) operations and smart metering systems.
+</li>
 
-                    <li>
-                        Participated in installation,
-                        calibration and maintenance of
-                        power distribution equipment.
-                    </li>
+<li>
+Working with Meter Data Management System
+(MDMS) activities and meter data analysis.
+</li>
 
-                    <li>
-                        Received practical training in
-                        Metering & Testing.
-                    </li>
+<li>
+Assisting in meter data monitoring,
+validation and reporting.
+</li>
 
-                    <li>
-                        Gained hands-on exposure to
-                        Protection & Instrumentation systems.
-                    </li>
+<li>
+Gaining practical exposure to metering,
+protection and instrumentation systems.
+</li>
 
-                    <li>
-                        Assisted in technical fault analysis
-                        and preparation of progress reports.
-                    </li>
+</ul>
 
-                </ul>
+</div>
 
-            </div>
-
-        </div>
+</div>
 
 
-    </div>
+<!-- VOLKA -->
+
+<div class="timeline-item">
+
+<div class="timeline-dot"></div>
+
+<div class="timeline-card">
+
+<h3>Management Trainee Engineer</h3>
+
+<div class="company">
+    Volka Food International, Multan
+</div>
+
+<div class="date">
+    June 2025 – May 2026
+</div>
+
+<ul>
+
+<li>
+Designed, tested and troubleshot electronic
+circuits and automation systems.
+</li>
+
+<li>
+Performed preventive maintenance and
+root-cause analysis.
+</li>
+
+<li>
+Worked with PLC programming using
+Siemens and Allen-Bradley systems.
+</li>
+
+<li>
+Worked with HMI development and
+industrial automation.
+</li>
+
+<li>
+Prepared technical documentation and
+compliance reports.
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
+
+<!-- INTERNSHIP -->
+
+<div class="timeline-item">
+
+<div class="timeline-dot"></div>
+
+<div class="timeline-card">
+
+<h3>Engineering Intern</h3>
+
+<div class="company">
+    MEPCO, Multan
+</div>
+
+<div class="date">
+    July 2024 – August 2024
+</div>
+
+<ul>
+
+<li>
+Participated in installation, calibration
+and maintenance of power distribution
+equipment.
+</li>
+
+<li>
+Received practical training in the
+Metering & Testing Department.
+</li>
+
+<li>
+Gained hands-on exposure to Protection &
+Instrumentation systems.
+</li>
+
+<li>
+Observed testing and operation of
+protection relays and substation equipment.
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
+
+</div>
 
 </div>
 
@@ -1746,84 +1339,56 @@ footer span{
 
 
 
-<!-- =======================================================
+<!-- =========================
      EDUCATION
-======================================================= -->
+========================= -->
 
 <section id="education">
 
 <div class="container">
 
-    <div class="section-title reveal">
+<div class="section-heading">
 
-        <span>Education</span>
+<div class="section-label">
+    Education
+</div>
 
-        <h2>Academic Background</h2>
+<h2 class="section-title">
+    Academic Background
+</h2>
 
-    </div>
-
-
-    <div class="education-card card reveal">
-
-        <div class="education-icon">
-            🎓
-        </div>
-
-        <div>
-
-            <h3>
-                B.Sc. Electrical Engineering
-            </h3>
-
-            <h4>
-                Specialization: Electronics
-            </h4>
-
-            <p>
-                NFC Institute of Engineering &
-                Technology, Multan
-            </p>
-
-            <p>
-                2021 – 2025
-            </p>
-
-        </div>
-
-    </div>
+</div>
 
 
-    <br><br>
+<div class="education-card">
 
+<h3>
+B.Sc. Electrical Engineering
+</h3>
 
-    <div class="education-card card reveal">
+<div class="degree">
+    Specialization: Electronics
+</div>
 
-        <div class="education-icon">
-            🎓
-        </div>
+<p>
+NFC Institute of Engineering & Technology,
+Multan
+</p>
 
-        <div>
+<p>
+<strong>2021 – 2025</strong>
+</p>
 
-            <h3>
-                MS Electrical Engineering
-            </h3>
+<br>
 
-            <h4>
-                Power Systems
-            </h4>
+<p>
+Strong academic foundation in electrical
+engineering, electronics, control systems,
+power systems, instrumentation and
+industrial automation.
+</p>
 
-            <p>
-                NFC Institute of Engineering &
-                Technology, Multan
-            </p>
-
-            <p>
-                2025 – Present
-            </p>
-
-        </div>
-
-    </div>
+</div>
 
 </div>
 
@@ -1831,182 +1396,111 @@ footer span{
 
 
 
-<!-- =======================================================
+<!-- =========================
      PROJECTS
-======================================================= -->
+========================= -->
 
-<section id="projects">
+<section class="projects" id="projects">
 
 <div class="container">
 
-    <div class="section-title reveal">
+<div class="section-heading">
 
-        <span>Projects</span>
+<div class="section-label">
+    Projects & Research
+</div>
 
-        <h2>Selected Engineering Work</h2>
+<h2 class="section-title">
+    Engineering Projects
+</h2>
 
-    </div>
+<p class="section-description">
+    Selected academic and technical work.
+</p>
 
+</div>
 
-    <div class="projects-grid">
 
+<div class="project-grid">
 
-        <div class="project-card reveal">
 
-            <div class="project-top">
-                🧠
-            </div>
+<div class="project-card">
 
-            <div class="project-content">
+<div class="project-number">
+    PROJECT 01
+</div>
 
-                <h3>
-                    EEG-Based Brain Monitoring
-                </h3>
+<h3>
+Advanced EEG-Based Brain Monitoring
+</h3>
 
-                <p>
+<p>
+Advanced EEG-based brain monitoring for early
+detection of harmful neural activities using
+EfficientNet architecture.
+</p>
 
-                    Advanced EEG-based classification
-                    for early detection of harmful neural
-                    activities using EfficientNet architecture.
+</div>
 
-                </p>
 
-            </div>
+<div class="project-card">
 
-        </div>
+<div class="project-number">
+    PROJECT 02
+</div>
 
+<h3>
+Industrial Automation
+</h3>
 
+<p>
+Practical work involving PLC programming,
+HMI development, control systems,
+troubleshooting and preventive maintenance.
+</p>
 
-        <div class="project-card reveal">
+</div>
 
-            <div class="project-top">
-                ⚡
-            </div>
 
-            <div class="project-content">
+<div class="project-card">
 
-                <h3>
-                    Smart Metering & AMI
-                </h3>
+<div class="project-number">
+    PROJECT 03
+</div>
 
-                <p>
+<h3>
+Smart Metering & AMI
+</h3>
 
-                    Practical study of smart meters,
-                    meter communication, MDC,
-                    MDM and AMI data flow.
+<p>
+Study and practical exposure to smart meters,
+AMI communication, meter data management
+and operational monitoring.
+</p>
 
-                </p>
+</div>
 
-            </div>
 
-        </div>
+<div class="project-card">
 
+<div class="project-number">
+    PROJECT 04
+</div>
 
+<h3>
+Protection & Instrumentation
+</h3>
 
-        <div class="project-card reveal">
+<p>
+Practical study of protective relays,
+CTs, PTs, circuit breakers, transformers
+and substation testing procedures.
+</p>
 
-            <div class="project-top">
-                🤖
-            </div>
+</div>
 
-            <div class="project-content">
 
-                <h3>
-                    Industrial Automation
-                </h3>
-
-                <p>
-
-                    PLC-based industrial automation,
-                    HMI development and troubleshooting
-                    of control systems.
-
-                </p>
-
-            </div>
-
-        </div>
-
-
-
-        <div class="project-card reveal">
-
-            <div class="project-top">
-                🛡️
-            </div>
-
-            <div class="project-content">
-
-                <h3>
-                    Protection & Instrumentation
-                </h3>
-
-                <p>
-
-                    Practical exposure to protective
-                    relays, CTs, PTs, circuit breakers
-                    and transformer testing.
-
-                </p>
-
-            </div>
-
-        </div>
-
-
-
-        <div class="project-card reveal">
-
-            <div class="project-top">
-                📊
-            </div>
-
-            <div class="project-content">
-
-                <h3>
-                    Meter Testing & Analysis
-                </h3>
-
-                <p>
-
-                    Energy meter accuracy testing,
-                    load profile analysis, peak load
-                    analysis and tampering detection.
-
-                </p>
-
-            </div>
-
-        </div>
-
-
-
-        <div class="project-card reveal">
-
-            <div class="project-top">
-                🔬
-            </div>
-
-            <div class="project-content">
-
-                <h3>
-                    Electronics & Control
-                </h3>
-
-                <p>
-
-                    Electronic circuit design,
-                    troubleshooting, sensors,
-                    instrumentation and control systems.
-
-                </p>
-
-            </div>
-
-        </div>
-
-
-    </div>
+</div>
 
 </div>
 
@@ -2014,51 +1508,35 @@ footer span{
 
 
 
-<!-- =======================================================
+<!-- =========================
      CV
-======================================================= -->
+========================= -->
 
 <section class="cv-section">
 
 <div class="container">
 
-    <div class="section-title reveal">
+<div class="cv-box">
 
-        <span>Curriculum Vitae</span>
+<h2>
+My Curriculum Vitae
+</h2>
 
-        <h2>My Professional CV</h2>
+<p>
+View or download my latest professional CV
+for complete information about my education,
+experience, skills and projects.
+</p>
 
-    </div>
+<a
+    href="./CV.pdf"
+    target="_blank"
+    class="btn btn-primary"
+>
+    View / Download CV
+</a>
 
-
-    <div class="cv-box reveal">
-
-        <h3>
-            Muhammad Hassaan Shahid
-        </h3>
-
-        <p>
-            Electrical & Electronics Engineer
-        </p>
-
-        <!-- EXACT FILE NAME FROM YOUR GITHUB -->
-
-        <a
-            href="./CV.pdf"
-            target="_blank"
-            rel="noopener"
-            class="btn btn-primary">
-            📄 View CV
-        </a>
-
-        <a
-            href="./CV.pdf"
-            download="Muhammad_Hassaan_Shahid_CV.pdf"
-            class="btn btn-outline">
-            ⬇ Download
-        </a>
-
-    </div>
+</div>
 
 </div>
 
@@ -2066,201 +1544,141 @@ footer span{
 
 
 
-<!-- =======================================================
+<!-- =========================
      CONTACT
-======================================================= -->
+========================= -->
 
-<section id="contact">
+<section class="contact" id="contact">
 
 <div class="container">
 
-    <div class="section-title reveal">
+<div class="section-heading">
 
-        <span>Contact</span>
+<div class="section-label">
+    Contact
+</div>
 
-        <h2>Let's Connect</h2>
+<h2 class="section-title">
+    Let's Connect
+</h2>
 
-    </div>
+<p class="section-description">
+    Feel free to connect with me for professional
+    opportunities, engineering discussions and
+    collaborations.
+</p>
 
-
-    <div class="contact-box reveal">
-
-        <h2>
-            Have a project or opportunity?
-        </h2>
-
-        <p>
-
-            I am always interested in engineering
-            opportunities, technical projects and
-            professional collaborations.
-
-        </p>
+</div>
 
 
-        <div class="contact-links">
-
-            <a
-                href="mailto:hassaanashahid944@gmail.com"
-                class="contact-link">
-                ✉ Email
-            </a>
+<div class="contact-grid">
 
 
-            <a
-                href="tel:+923042156716"
-                class="contact-link">
-                ☎ Phone
-            </a>
+<div class="contact-card">
+
+<div class="contact-icon">
+    ✉️
+</div>
+
+<h3>Email</h3>
+
+<a href="mailto:hassaanashahid944@gmail.com">
+    hassaanashahid944@gmail.com
+</a>
+
+</div>
 
 
-            <a
-                href="https://www.linkedin.com/"
-                target="_blank"
-                rel="noopener"
-                class="contact-link">
-                in LinkedIn
-            </a>
+<div class="contact-card">
+
+<div class="contact-icon">
+    📱
+</div>
+
+<h3>Phone</h3>
+
+<p>
+    +92 304 2156716
+</p>
+
+</div>
 
 
-            <a
-                href="https://github.com/hassaanashahid944"
-                target="_blank"
-                rel="noopener"
-                class="contact-link">
-                GitHub
-            </a>
+<div class="contact-card">
 
-        </div>
+<div class="contact-icon">
+    📍
+</div>
 
-    </div>
+<h3>Location</h3>
+
+<p>
+    Multan, Pakistan
+</p>
+
+</div>
+
+
+</div>
 
 </div>
 
 </section>
 
-</main>
 
 
-
-<!-- =======================================================
+<!-- =========================
      FOOTER
-======================================================= -->
+========================= -->
 
 <footer>
 
-    <p>
-        © <span id="year"></span>
-        <strong>Muhammad Hassaan Shahid</strong>.
-        All Rights Reserved.
-    </p>
+<div class="container">
+
+<p>
+© 2026 Muhammad Hassaan Shahid.
+All Rights Reserved.
+</p>
+
+<p>
+Electrical & Electronics Engineer
+<span>•</span>
+Power Systems
+<span>•</span>
+Automation
+<span>•</span>
+Instrumentation
+</p>
+
+</div>
 
 </footer>
 
 
 
-<!-- =======================================================
+<!-- =========================
      JAVASCRIPT
-======================================================= -->
+========================= -->
 
 <script>
 
-/* =========================================================
-   MOBILE MENU
-========================================================= */
+function toggleMenu(){
 
-const menuBtn = document.getElementById("menuBtn");
+    const menu = document.getElementById("navLinks");
 
-const navLinks = document.getElementById("navLinks");
-
-
-menuBtn.addEventListener("click", function(){
-
-    navLinks.classList.toggle("show");
-
-});
-
-
-/* Close menu after clicking a link */
-
-document
-    .querySelectorAll(".nav-links a")
-    .forEach(function(link){
-
-        link.addEventListener("click", function(){
-
-            navLinks.classList.remove("show");
-
-        });
-
-    });
-
-
-
-/* =========================================================
-   SCROLL REVEAL
-========================================================= */
-
-const revealElements =
-    document.querySelectorAll(".reveal");
-
-
-function revealOnScroll(){
-
-    const windowHeight =
-        window.innerHeight;
-
-    revealElements.forEach(function(element){
-
-        const elementTop =
-            element.getBoundingClientRect().top;
-
-        if(elementTop < windowHeight - 80){
-
-            element.classList.add("active");
-
-        }
-
-    });
+    menu.classList.toggle("active");
 
 }
 
 
-window.addEventListener(
-    "scroll",
-    revealOnScroll
-);
+document.querySelectorAll(".nav-links a").forEach(function(link){
 
-window.addEventListener(
-    "load",
-    revealOnScroll
-);
+    link.addEventListener("click", function(){
 
+        document.getElementById("navLinks")
+        .classList.remove("active");
 
-
-/* =========================================================
-   CURRENT YEAR
-========================================================= */
-
-document.getElementById("year").textContent =
-    new Date().getFullYear();
-
-
-
-/* =========================================================
-   IMAGE ERROR CHECK
-========================================================= */
-
-const profileImage =
-    document.querySelector(".profile-photo");
-
-
-profileImage.addEventListener("error", function(){
-
-    console.error(
-        "Profile image could not be loaded. " +
-        "Make sure the GitHub file is named exactly: profile.jpeg"
-    );
+    });
 
 });
 
